@@ -9,6 +9,7 @@ var connector = new builder.ChatConnector({
 });
 var bot = new builder.UniversalBot(connector);  
 bot.dialog('/', function (session) {
+    console.log(session);
     session.send('Hello World');
 });
 
