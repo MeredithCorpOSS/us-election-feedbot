@@ -1,20 +1,20 @@
-var express = require('express');
-var app = express();
+var restify = require('restify');
+var builder = require('botbuilder');
+var config  = require('config');
 
-app.set('port', (process.env.PORT || 5000));
-
-app.use(express.static(__dirname + '/public'));
-
-// views is directory for all template files
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-
-app.get('/', function(request, response) {
-  response.render('pages/index');
+// Create bot and add dialogs
+var connector = new builder.ChatConnector({
+    appId: config.microsoftBot.appId,
+    appPassword: config.microsoftBot.appSecret
+});
+var bot = new builder.UniversalBot(connector);  
+bot.dialog('/', function (session) {
+    session.send('Hello World');
 });
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+// Setup Restify Server
+var server = restify.createServer();
+server.post('/api/messages', connector.listen());
+server.listen(process.env.port || 3978, function () {
+    console.log('%s listening to %s', server.name, server.url); 
 });
-
-
