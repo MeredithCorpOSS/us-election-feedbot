@@ -1,6 +1,6 @@
 var restify = require('restify');
 var builder = require('botbuilder');
-var config  = require('config');
+var config  = require('./config');
 
 // Create bot and add dialogs
 var connector = new builder.ChatConnector({
