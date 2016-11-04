@@ -1,0 +1,18 @@
+{
+  "name": "node-js-getting-started",
+  "version": "0.2.5",
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+    "node": "5.9.1"
+  },
+  "main": "sources/twitter/localTesting.js ",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "botbuilder": "^3.4.4",
+    "restify": "^4.2.0",
+    "twitter": "^1.4.0"
+  },
+  "license": "MIT"
+}
