@@ -9,9 +9,17 @@ var connector = new builder.ChatConnector({
 });
 var bot = new builder.UniversalBot(connector);  
 bot.dialog('/', function (session) {
-    console.log(session);
-    session.send('Hello World');
+    session.send("Starting your pizza order...");
+    setTimeout(function(){
+        var address = session.message.address;
+        var msg = new builder.Message()
+            .address(address)
+            .text("Your pizza is on its way!");
+        bot.send(msg);
+    },20000);
 });
+
+
 
 // Setup Restify Server
 var server = restify.createServer();
