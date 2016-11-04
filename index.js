@@ -9,15 +9,7 @@ var connector = new builder.ChatConnector({
 });
 var bot = new builder.UniversalBot(connector);  
 bot.dialog('/', function (session) {
-    session.send("Starting your pizza order...");
-    setTimeout(function(){
-        var address = session.message.address;
-        console.log(session.message.address);
-        var msg = new builder.Message()
-            .address(address)
-            .text("Your pizza is on its way!");
-        bot.send(msg);
-    },20000);
+    session.send("You are all set to receive updates on this election...");
 });
 
 

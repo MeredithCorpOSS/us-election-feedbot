@@ -35,8 +35,25 @@ exports.getEach = function(cb) {
         bot: { id: 'B2Z30NKE3:T2SA36G12', name: 'election_bot' },
         serviceUrl: 'https://slack.botframework.com',
         useAuth: true 
-    }
-    
+    },
+    { 
+        id: '3f7f2a16e2a946ba9feee937aba88001',
+        channelId: 'slack',
+        user: { id: 'U2Z3W4U3Z:T2SA36G12', name: 'jhau' },
+        conversation: { isGroup: false, id: 'B2Z30NKE3:T2SA36G12:D2YC2A7SN' },
+        bot: { id: 'B2Z30NKE3:T2SA36G12', name: 'election_bot' },
+        serviceUrl: 'https://slack.botframework.com',
+        useAuth: true 
+    },
+    { 
+       id: 'mid.1478269687668:3d1aa56e21',
+       channelId: 'facebook',
+       user: { id: '1280792681982754', name: 'Us Ele' },
+       conversation: { isGroup: false, id: '1280792681982754-1129708457144229' },
+       bot: { id: '1129708457144229', name: 'Timeincbot' },
+       serviceUrl: 'https://facebook.botframework.com',
+       useAuth: true 
+   }
     
     ];
 

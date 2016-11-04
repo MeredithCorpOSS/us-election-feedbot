@@ -1,8 +1,8 @@
 'use strict';
 const handler = require('./makeCall');
 const builder = require('botbuilder');
-const botSender = require('../../botSender.js');
-const users = require('../../users.js');
+const botSender = require('./botSender.js');
+const users = require('./users.js');
 
 
 function lambdaHandler(event, context, cb) {
@@ -23,11 +23,17 @@ function lambdaHandler(event, context, cb) {
             users.getEach(function (user) {
                 let x;
                 let msg;
+                // console.log(res);
+                // console.log(user);
 
                 for (x in res) {
+                    // console.log(res[x].name + ':' + res[x].status.text);
                     msg = new builder.Message()
                         .address(user)
-                        .text(res[x].text);
+                        // .text(res[x].text);
+                        .text(res[x].name + ':' + res[x].status.text);
+
+                    botSender.send(msg);
                 }
             });
 
