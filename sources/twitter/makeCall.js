@@ -12,7 +12,7 @@ var params = {
 };
 
 
-function get(){
+function get(event,context,cb){
 	console.log('inside makeCall');
 	
 	request({
@@ -35,6 +35,7 @@ function get(){
 			else {
 				asset = JSON.parse(body);
 				console.log(asset);
+				cb(asset);
 				// defer.resolve(asset);
 			}
 		});

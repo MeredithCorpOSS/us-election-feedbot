@@ -18,11 +18,10 @@ function lambdaHandler(event, context, cb) {
           'message': err.message
         };
         console.error('Inside Index.js : Caught Error :' + error);
-        cb(JSON.stringify(error));
       } else {
         cb(null, data);
       }
-    });
+    }, cb);
   } catch (err) {
     console.log('Inside Index.js Catch: Caught Error :' + err);
     var error = {
