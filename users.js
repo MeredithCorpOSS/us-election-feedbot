@@ -8,7 +8,16 @@ exports.getEach = function(cb) {
         bot: { id: 'Timeincbot', name: 'Timeincbot' },
         serviceUrl: 'https://webchat.botframework.com',
         useAuth: true 
-    }]
+    },
+    { 
+        id: '7RmBDMHIphQ|000000000000000006',
+        channelId: 'webchat',
+        user: { id: 'FBKctkMx5Ap' },
+        conversation: { id: '7RmBDMHIphQ' },
+        bot: { id: 'Timeincbot', name: 'Timeincbot' },
+        serviceUrl: 'https://webchat.botframework.com',
+        useAuth: true 
+    }];
 
     for (x in address) {
         cb(address[x]);
