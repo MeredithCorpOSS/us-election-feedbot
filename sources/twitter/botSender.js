@@ -1,5 +1,5 @@
-var config  = require('./config');
-var builder = require('botbuilder');
+const config  = require('./config');
+const builder = require('botbuilder');
 
 exports.send = function(msg) {  
     // Create bot and add dialogs
@@ -8,10 +8,6 @@ exports.send = function(msg) {
       appPassword: config.microsoftBot.appSecret
     });
 
-    // console.log(`appid for udit ${config.microsoftBot.appId}`);
-    var bot = new builder.UniversalBot(connector);
-
-    
-    // console.log(msg);
+    var bot = new builder.UniversalBot(connector); 
     bot.send(msg);
 }

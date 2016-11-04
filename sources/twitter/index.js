@@ -1,8 +1,8 @@
 'use strict';
 const handler = require('./makeCall');
 const builder = require('botbuilder');
-const botSender = require('../../botSender.js');
-const users = require('../../users.js');
+const botSender = require('./botSender.js');
+const users = require('./users.js');
 
 
 function lambdaHandler(event, context, cb) {

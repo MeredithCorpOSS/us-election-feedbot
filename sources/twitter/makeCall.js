@@ -1,4 +1,4 @@
-const Twitter = require('twitter');
+// const Twitter = require('twitter');
 const request = require('request');
 
 var bearerToken = 'AAAAAAAAAAAAAAAAAAAAAPkpxwAAAAAAYJeU4n%2BuOUrYX0fwBwBE4k7Loks%3DGHT4ZT40OOh0CPhFcqjiTqYYqruiRNF3pIoJbnodjKhOybej3u';
