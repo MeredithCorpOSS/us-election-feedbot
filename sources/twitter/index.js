@@ -24,10 +24,14 @@ function lambdaHandler(event, context, cb) {
                 let x;
                 let msg;
 
+                console.log(user);
+
                 for (x in res) {
                     msg = new builder.Message()
                         .address(user)
                         .text(res[x].text);
+
+                    botSender.send(msg);
                 }
             });
 

@@ -1,5 +1,5 @@
 exports.getEach = function(cb) {  
-    const x;
+    var x;
     const address = [{ 
         id: '1ObYpBk6jEc|000000000000000004',
         channelId: 'webchat',

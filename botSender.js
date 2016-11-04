@@ -1,4 +1,5 @@
-var config  = require('./config');
+const config  = require('./config');
+const builder = require('botbuilder');
 
 exports.send = function(msg) {  
     // Create bot and add dialogs
@@ -8,7 +9,5 @@ exports.send = function(msg) {
     });
 
     var bot = new builder.UniversalBot(connector); 
-
-
     bot.send(msg);
 }
