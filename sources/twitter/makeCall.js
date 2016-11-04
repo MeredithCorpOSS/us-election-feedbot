@@ -4,10 +4,10 @@ const request = require('request');
 var bearerToken = 'AAAAAAAAAAAAAAAAAAAAAPkpxwAAAAAAYJeU4n%2BuOUrYX0fwBwBE4k7Loks%3DGHT4ZT40OOh0CPhFcqjiTqYYqruiRNF3pIoJbnodjKhOybej3u';
 var params = {
 	baseUrl: 'https://api.twitter.com',
-	path: '1.1/search/tweets.json',
-	url: 'https://api.twitter.com/1.1/statuses/user_timeline.json',
+	path: '1.1/users/lookup.json',
+	url: 'https://api.twitter.com/1.1/users/lookup.json',
 	qParams: {
-		screen_name: 'election2016_us'
+		screen_name: 'HillaryClinton,narendramodi,chetan_bhagat,elonmusk,BarackObama,PutinRF_Eng,David_Cameron,Pontifex,election2016_us'
 	}
 };
 
