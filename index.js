@@ -12,6 +12,7 @@ bot.dialog('/', function (session) {
     session.send("Starting your pizza order...");
     setTimeout(function(){
         var address = session.message.address;
+        console.log(session.message.address);
         var msg = new builder.Message()
             .address(address)
             .text("Your pizza is on its way!");
